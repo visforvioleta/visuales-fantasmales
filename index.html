@@ -2,22 +2,33 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visuales fantasmales</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Visuales fantasmales</h1>
+  
+  <div class="content">
+    <div class="marquee">
+      <div class="marquee_blur" aria-hidden="true">
+        <p class="marquee_text">Visuales Fantasmales</p>
+      </div>
+      <div class="marquee_clear">
+        <p class="marquee_text">Visuales Fantasmales</p>
+      </div>
+    </div>
+  </div>
 
   <div class="canvas-wrapper">
     <canvas></canvas>
   </div>
 
   <div class="controls">
-    <button id="btn0">Visual 0</button>
-    <button id="btn1">Visual 1</button>
-    <button id="btn2">Visual 2</button>
-    <button id="btn3">Visual 3</button>
-    <button id="screenshot">📸 Captura</button>
+    <button id="btn0">Desesperación</button>
+    <button id="btn1">Placer</button>
+    <button id="btn2">Orgullo</button>
+    <button id="btn3">Angustia</button>
+    <button id="screenshot">📸</button>
   </div>
 
   <script src="https://unpkg.com/hydra-synth"></script>

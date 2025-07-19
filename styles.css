@@ -1,17 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:400,400i&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 2rem;
-    background-color: black;
-    color: white;
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: Raleway, sans-serif;
+  background-color: #000;
+  color: #fff;
+  font-size: 24px;
+
+  margin: 0;
+  padding: rem;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 95%;
+  max-width: 90vw;
+  padding: 3em 1em;
+  margin: 0 auto;
+}
+
+.marquee {
+  position: relative;
+  width: 100%;
+  height: 15vw;
+  max-height: 140px;
+  font-size: clamp(8rem, 8vw, 5rem);
+  font-family: 'Dancing Script', cursive;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.marquee_text {
+    position: absolute;
+    min-width: 100%;
+    white-space: nowrap;
+    /*animation: marquee 16s infinite linear;*/
+    animation: marquee 16s infinite linear, gradientShift 6s infinite alternate;
+  
+    background: linear-gradient(90deg, red, gold, hotpink);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.1);
+
+    
   }
+  
+
+@keyframes marquee {
+  from { transform: translateX(70%); }
+  to { transform: translateX(-70%); }
+}
+
+@keyframes gradientShift {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: 100% center;
+    }
+  }
+
+.marquee_blur {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  background-image:
+    linear-gradient(to right, rgb(255, 245, 0), 1rem, transparent 50%),
+    linear-gradient(to left, rgb(255, 245, 0), 1rem, transparent 50%);
+  filter: contrast(15);
+}
+
+.marquee_blur p {
+  filter: blur(0.07em);
+}
+
+.marquee_clear {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+
+
+
+
+
   
   h1 {
     margin-bottom: 1rem;
-    font-size: 2rem;
     text-align: center;
   }
   
