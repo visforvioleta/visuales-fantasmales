@@ -14,10 +14,34 @@ s0.initCam({ crossOrigin: 'anonymous' })
 
 // Definir los visuales
 const visuals = [
-  () => osc().add(s0).out(o0),
-  () => noise().add(s0).out(o0),
-  () => voronoi().add(s0).out(o0),
-  () => gradient().add(s0).out(o0),
+  () => osc(5,0.175,2)
+.rotate(Math.PI/2)
+.color(1,1,0)
+.invert()
+  .layer(src(s0).thresh(0.5).invert().luma().scale(1.35,9/12))
+.mult(src(s0).saturate(1.5).scale(1.35,9/12)).out(o0),
+  () => osc(25,0.15,2)
+  .rotate(Math.PI/2)
+.color(1,0,1)
+.kaleid(15)
+.invert([1,0])
+.rotate(0.1,0.15)
+  .layer(src(s0).thresh(0.5).invert().luma().scale(1.35,9/12))
+.mult(src(s0).saturate(1.5).scale(1.35,9/12)).out(o0),
+  () => osc(5,0.175,2)
+.rotate(Math.PI/2)
+.color(1,1,0)
+.kaleid(2)
+.layer(src(s0).thresh(0.5).invert().luma().scale(1.35,9/12))
+.mult(src(s0).saturate(1.5).scale(1.35,9/12)).out(o0),
+  () => osc(10,0.15,2)
+.color(0,1,1)
+      .kaleid(250)
+.invert([1,0])
+.rotate(0.1,0.75)
+.scale(1,9/16)
+.layer(src(s0).thresh(0.5).invert().luma().scale(1.35,9/12))
+.mult(src(s0).saturate(1.5).scale(1.35,9/12)).out(o0),
 ]
 
 let currentVisual = 0

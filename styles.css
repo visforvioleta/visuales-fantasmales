@@ -21,6 +21,7 @@ body {
   align-items: center;
 }
 
+/* ACA VA EL TITULO CONTENIDO PONERLE OJO A LA VERSION DE CELU */
 .content {
   width: 95%;
   max-width: 90vw;
@@ -99,10 +100,6 @@ body {
 }
 
 
-
-
-
-
   
   h1 {
     margin-bottom: 1rem;
@@ -111,7 +108,7 @@ body {
   
   .canvas-wrapper {
     position: relative;
-    width: 80%;
+    width: 75%;
     max-width: 960px;
     aspect-ratio: 16 / 9;
     background-color: #111;
