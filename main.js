@@ -91,3 +91,5 @@ document.getElementById("screenshot").onclick = () => {
 
 // Inicia con visual 0
 changeVisual(0)
+
+
