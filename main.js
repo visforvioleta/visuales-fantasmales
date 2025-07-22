@@ -1,3 +1,5 @@
+
+
 // Encuentra el canvas HTML ya existente
 const canvas = document.querySelector("canvas")
 
@@ -66,7 +68,7 @@ function updateButtons() {
 }
 
 // Captura pantalla del canvas actual
-document.getElementById("screenshot").onclick = () => {
+/*document.getElementById("screenshot").onclick = () => {
     const canvas = document.querySelector("canvas");
   
     // Crea un segundo canvas temporal (offscreen) del mismo tamaño
@@ -87,6 +89,19 @@ document.getElementById("screenshot").onclick = () => {
       console.error(e);
     }
   };
+
+  document.getElementById("screenshot").onclick = () => {
+  html2canvas(document.body).then(canvas => {
+    const link = document.createElement("a");
+    link.download = `screenshot-${Date.now()}.png`;
+    link.href = canvas.toDataURL();
+    link.click();
+  }).catch(err => {
+    alert("No se pudo capturar la pantalla.");
+    console.error(err);
+  });
+};*/
+
   
 
 // Inicia con visual 0
