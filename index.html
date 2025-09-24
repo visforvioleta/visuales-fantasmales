@@ -8,10 +8,10 @@
 </head>
 
 <body>
-  <video autoplay muted loop playsinline id="background-video">
-  <source src="./assets/FONDO_PAGWEB.mp4" type="video/mp4">
-  Tu navegador no soporta video HTML5.
-</video>
+  <video id="background-video" autoplay muted loop playsinline>
+    <source src="./assets/FONDO_PAGWEB.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
 
   <div class="content">
     <div class="marquee">
@@ -33,10 +33,15 @@
     <button id="btn1">Orgullo</button>
     <button id="btn2">Angustia</button>
     <button id="btn3">Desesperación</button>
-    <!--<button id="screenshot">📸</button>-->
+    <!-- <button id="screenshot">📸</button> -->
   </div>
 
-  <footer><p>Sitio web con algunas visuales del videoclip de <a href="https://www.youtube.com/watch?v=cM3zqxaATtw">"El Fantasma del que huyo"</a></p></footer>
+  <footer>
+    <p>
+      Sitio web con algunas visuales del videoclip de
+      <a href="https://www.youtube.com/watch?v=cM3zqxaATtw">"El Fantasma del que huyo"</a>
+    </p>
+  </footer>
 
   <script src="https://unpkg.com/hydra-synth"></script>
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
